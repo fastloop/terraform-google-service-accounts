@@ -55,6 +55,12 @@ variable "public_key_file" {
   default     = "pubkey.asc"
 }
 
+variable "public_key_content" {
+  type        = string
+  description = "Content of pubkey.asc Create by running `gpg --export --armor <key-id> > pubkey.asc`"
+  default     = "pubkey.asc"
+}
+
 variable "function_members" {
   type        = list(string)
   description = "List of IAM members (users, groups, etc) with the invoker permission on the CLoud Function"
